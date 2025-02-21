@@ -1,0 +1,13 @@
+name: Vérification du dépôts
+
+on: [push, pull_request]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Cloner le dépôt
+        uses: actions/checkout@v3
+      
+      - name: Vérifier les fichiers du dépôt
+        run: ls -la
